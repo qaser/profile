@@ -5,3 +5,10 @@
     line-height: 60px;
     margin: 45px 0 0 45px;
 }
+
+
+@media screen and (max-width: 650px) {
+    .skill-item__number {
+        margin: 35px 0 0 35px;
+    }
+}

@@ -5,4 +5,40 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0 150px 150px 0;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .skill-item {
+        width: 320px;
+        margin-right: 120px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .skill-item {
+        width: 300px;
+        margin-right: 80px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .skill-item {
+        width: 270px;
+        margin-right: 60px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .skill-item {
+        width: 440px;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .skill-item {
+        width: 100%;
+    }
 }

@@ -6,7 +6,7 @@
 }
 
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 500px) {
     .logo__prefix {
         font-size: 20px;
         line-height: 20px;

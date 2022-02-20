@@ -6,7 +6,7 @@
     margin: 0;
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 500px) {
     .logo__suffix {
         font-size: 20px;
         line-height: 20px;

@@ -22,5 +22,6 @@
 @media screen and (max-width: 650px) {
     .console__cursor {
         height: 50px;
+        width: 5px;
     }
 }

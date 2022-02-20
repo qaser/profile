@@ -1,0 +1,47 @@
+.skill-item__description {
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 50px;
+    width: 354px;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .skill-item__description {
+        width: 320px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .skill-item__description {
+        font-size: 32px;
+        line-height: 40px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .skill-item__description {
+        width: 270px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .skill-item__description {
+        position: absolute;
+        top: 170px;
+        left: 90px;
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .skill-item__description {
+        width: 225px;
+        left: 50px;
+        font-size: 26px;
+        line-height: 30px;
+    }
+}
