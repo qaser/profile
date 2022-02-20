@@ -2,4 +2,11 @@
     text-decoration: none;
     color: black;
     cursor: pointer;
+    transition: opacity .3s linear .1s, color .5s linear .2s;
+}
+
+
+.link:hover {
+    opacity: .6;
+    color: red;
 }
