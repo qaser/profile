@@ -1,0 +1,14 @@
+.console__cursor_animated {
+    animation: blink-animation 1s forwards steps(2, end);
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink-animation {
+   from {
+        opacity: 0;
+   }
+
+   to {
+        opacity: 1;
+   }
+}

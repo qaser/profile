@@ -1,0 +1,14 @@
+.logo__suffix {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 28px;
+    color: #fff;
+    margin: 0;
+}
+
+@media screen and (max-width: 490px) {
+    .logo__suffix {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}

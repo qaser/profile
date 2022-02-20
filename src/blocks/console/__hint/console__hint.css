@@ -1,0 +1,31 @@
+.console__hint {
+    display: flex;
+    align-items: center;
+    padding-top: 250px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .console__hint {
+        padding-top: 200px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .console__hint {
+        padding-top: 160px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .console__hint {
+        padding-top: 120px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .console__hint {
+        padding-top: 0;
+    }
+}

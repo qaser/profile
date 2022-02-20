@@ -1,0 +1,22 @@
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 150px;
+    column-gap: 150px;
+    justify-content: center;
+    margin: 0 80px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .skills {
+        margin: 0 60px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .skills {
+        margin: 0 40px;
+    }
+}

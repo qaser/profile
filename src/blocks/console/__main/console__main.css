@@ -1,0 +1,16 @@
+.console__main {
+    margin-right: 35px;
+}
+
+
+@media screen and (max-width: 650px) {
+    .console__main {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .console__main {
+        margin: 0;
+    }
+}

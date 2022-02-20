@@ -1,0 +1,26 @@
+.console__cursor {
+    background-color: #EBC921;
+    width: 8px;
+    height: 80px;
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .console__cursor {
+        height: 70px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .console__cursor {
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .console__cursor {
+        height: 50px;
+    }
+}

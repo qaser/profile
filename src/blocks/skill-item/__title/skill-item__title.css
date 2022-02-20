@@ -1,0 +1,7 @@
+.skill-item__title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 32px;
+    align-self: flex-end;
+    margin: 0 35px 35px 0;
+}

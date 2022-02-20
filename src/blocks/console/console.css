@@ -1,0 +1,27 @@
+.console {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0 40px;
+}
+
+@media screen and (max-width: 1000px) {
+    .console {
+        margin: 0 20px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .console {
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .console {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}

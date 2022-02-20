@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'UbuntuMono';
+    src: url(../fonts/UbuntuMono-R.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'UbuntuMono';
+    src: url(../fonts/UbuntuMono-R.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'ReemKufi';
+    src: url(../fonts/ReemKufi-Regular.ttf);
+    font-weight: 400;
+}
