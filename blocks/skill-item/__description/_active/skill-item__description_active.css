@@ -1,0 +1,4 @@
+.skill-item__description_active {
+    opacity: 1;
+    transform: translateY(0);
+}

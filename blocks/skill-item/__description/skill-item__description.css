@@ -4,6 +4,9 @@
     line-height: 50px;
     width: 354px;
     margin: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-in-out, transform .7s ease-in-out;
 }
 
 
