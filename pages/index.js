@@ -3,7 +3,7 @@ function scrollFade() {
     texts.forEach(text => {
          const textPosition = text.getBoundingClientRect().top;
          const windowHeight = window.innerHeight;
-        if (textPosition < windowHeight / 3) {
+        if (textPosition < windowHeight / 1.5) {
             text.classList.add('skill-item__description_active');
         }
     })
