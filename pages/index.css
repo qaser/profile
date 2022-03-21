@@ -26,6 +26,7 @@
 @import url(../blocks/console/__field/console__field.css);
 
 @import url(../blocks/skills/skills.css);
+@import url(../blocks/skill-item/_active/skill-item_active.css);
 @import url(../blocks/skills/__card/skills__card.css);
 @import url(../blocks/skill-item/__description/skill-item__description.css);
 @import url(../blocks/skill-item/__description/_active/skill-item__description_active.css);
