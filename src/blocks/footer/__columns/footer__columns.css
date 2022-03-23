@@ -1,0 +1,24 @@
+.footer__columns {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1260px;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer__columns {
+      width: calc(100% - 60px);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .footer__columns {
+      width: calc(100% - 40px);
+      justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer__columns {
+        width: 100%;
+    }
+}

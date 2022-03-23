@@ -3,42 +3,13 @@ import Api from '../js/api/Api.js';
 import './index.css';
 import Chart from 'chart.js/auto';
 
-
 const ctx = document.getElementById('myChart').getContext('2d');
-new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-      datasets: [
-        {
-          label: "Population (millions)",
-          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-          data: [2478,5267,734,784,433]
-        }
-      ]
-    },
-    options: {
-        plugins: {
-            title: {
-                display: true,
-                text: 'Custom Chart Title'
-            },
-            legend: {
-                display: true,
-                labels: {
-                    color: 'rgb(255, 99, 132)'
-                }
-            },
-        }
-    }
-});
-
-
 const texts = document.querySelectorAll('.skill-item__description');
 const windowHeight = window.innerHeight;
+Chart.defaults.font.size = 20;
+Chart.defaults.font.family = 'UbuntuMono';
 let namesRepos = [];
-let langDict = {};
-
+let langDict = new Object;
 
 // создание объекта api
 const api = new Api({
@@ -61,33 +32,93 @@ function scrollFade() {
     })
 }
 
+
+function generateArrowOfColors(countLang) {
+    let colors = [];
+    for (let i = 0; i < countLang; i++) {
+        colors.push(getRandomColor());
+    };
+    return colors;
+}
+
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+
 function getLanguageData(namesArr) {
+    let newLang = new Object;
+    let promList = [];
     namesArr.forEach((name) => {
-        api.getRepoLanguage(name)
+        let prom = api.getRepoLanguage(name)
             .then((res) => {
-                compileLanguageData(res);
+                compileLanguageData(res, newLang);
             })
             .catch((err) => {
                 console.log(`Ошибка: ${err.status}`);
             })
+        promList.push(prom)
     });
+    Promise.all(promList)
+        .then(() => {
+            const countLang = Object.keys(newLang).length;
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: Object.keys(newLang),
+                  datasets: [
+                    {
+                      label: "Programming languages",
+                      backgroundColor: generateArrowOfColors(countLang),
+                      data: Object.values(newLang)
+                    }
+                  ]
+                },
+                options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'My GitHub stats',
+                            color: '#000',
+                            font: {
+                                size: 34,
+                            },
+                        },
+                        subtitle: {
+                            text: 'Bytes of code',
+                            display: true,
+                            padding: 20,
+                            color: '#000'
+                        },
+                        legend: {
+                            display: true,
+                        },
+                    }
+                }
+            });
+        })
 }
 
-function compileLanguageData(obj) {
+
+function compileLanguageData(obj, newObj) {
     Object.entries(obj).forEach((lang) => {
-        if (lang[0] in langDict) {
-            langDict[lang[0]] = langDict[lang[0]] + lang[1];
+        if (lang[0] in newObj) {
+            newObj[lang[0]] = newObj[lang[0]] + lang[1];
         } else {
-            langDict[lang[0]] = lang[1];
+            newObj[lang[0]] = lang[1];
         }
     });
 }
 
-window.addEventListener('scroll', scrollFade);
 
-
-let result = Promise.all([api.getMyRepos()])
-    .then(([res]) => {
+api.getMyRepos()
+    .then((res) => {
         let repos = res;
         repos.forEach((rep) => {
         namesRepos.push(rep.name);
@@ -96,8 +127,8 @@ let result = Promise.all([api.getMyRepos()])
     .then(() => {
         getLanguageData(namesRepos);
     })
-    .then(() => {
-        return langDict;
-    })
+    .catch((err) => {
+        console.log(`Ошибка: ${err.status}`);
+    });
 
-console.log(result);
+window.addEventListener('scroll', scrollFade);

@@ -1,0 +1,15 @@
+.footer__column-title {
+    margin: 0;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+
+
+@media screen and (max-width: 500px) {
+    .footer__column-title {
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
