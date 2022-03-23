@@ -30,7 +30,7 @@
 .projects__tail{margin:0}
 .projects__title{margin:0 0 20px}
 .projects__font{font-size:34px;font-weight:400;line-height:42px}@media screen and (max-width:500px){.projects__font{font-size:26px;line-height:32px}}
-.chart{margin:50px auto;width:600px}
+.chart{margin:50px auto}
 .footer{background-color:#1f1f1f;box-sizing:border-box;display:flex;flex-direction:column;min-height:350px;padding-bottom:30px;padding-top:30px}
 .footer__columns{display:flex;justify-content:flex-end;max-width:1260px}@media screen and (max-width:1000px){.footer__columns{width:calc(100% - 60px)}}@media screen and (max-width:900px){.footer__columns{justify-content:center;width:calc(100% - 40px)}}@media screen and (max-width:500px){.footer__columns{width:100%}}
 .footer__column{margin:35px}
