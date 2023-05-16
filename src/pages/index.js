@@ -9,7 +9,6 @@ const windowHeight = window.innerHeight;
 Chart.defaults.font.size = 20;
 Chart.defaults.font.family = 'UbuntuMono';
 let namesRepos = [];
-let langDict = new Object;
 
 // создание объекта api
 const api = new Api({
@@ -86,18 +85,26 @@ function getLanguageData(namesArr) {
                             display: true,
                             text: 'My GitHub stats',
                             color: '#000',
+                            padding: 0,
                             font: {
-                                size: 34,
+                                size: 30,
                             },
                         },
                         subtitle: {
                             text: 'Bytes of code',
                             display: true,
-                            padding: 20,
+                            padding: 10,
                             color: '#000'
                         },
                         legend: {
                             display: true,
+                            position: 'bottom',
+                            labels: {
+                                boxWidth: 14,
+                                font: {
+                                    size: 14,
+                                }
+                            }
                         },
                     }
                 }

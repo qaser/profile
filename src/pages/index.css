@@ -40,6 +40,7 @@
 @import url(../blocks/projects/__font/projects__font.css);
 
 @import url(../blocks/chart/chart.css);
+@import url(../blocks/chart/__area/chart__area.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__columns/footer__columns.css);
